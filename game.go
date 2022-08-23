@@ -27,16 +27,22 @@ func render() {
   rl.EndDrawing()
 }
 
-func main() {
-	rl.InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window")
-
+func init() {
+  rl.InitWindow(screenWidth, screenHeight, "seeder")
 	rl.SetTargetFPS(60)
+}
 
+func quit() {
+  rl.CloseWindow()
+}
+
+
+func main() {
 	for running {
     input()
     update()
     render()
 	}
 
-	rl.CloseWindow()
+  quit()
 }
